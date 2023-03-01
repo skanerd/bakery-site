@@ -1,0 +1,354 @@
+html {
+  text-align: center;
+  scroll-behavior: smooth;
+  font-family: 'Shippori Mincho B1', serif;
+}
+body {
+  margin: auto;
+  width: 100vw;
+  background-color: black;
+  color: white;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+h1 {
+  margin: 0;
+}
+
+
+/* 最上段 */
+
+.main-navigation {
+  position: fixed;
+  width: 100%;
+  height: 120px;
+  z-index: 2;
+  background-color: rgba(1, 1, 1, 0.4);
+}
+.main-navigation a {
+  margin: 0 100px 0;
+  font-size: 20px;
+  transition: 0.3s;
+}
+.main-navigation a:hover {
+  transition: 0.3s;
+  color: #77ceb1;
+}
+.main-navigation img {
+  width: 100px;
+}
+.logo {
+  z-index: 2;
+}
+ul {
+  list-style: none;
+}
+
+
+
+
+/* screen */
+
+#screen {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  background-color: black;
+}
+#front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+
+
+
+
+
+/* button */
+
+.button {
+  margin: auto;
+  width: 120px;
+  height: 40px;
+  border: 3px solid white;
+  border-radius: 10px;
+}
+
+
+
+/* スライド */
+
+.container{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  z-index: -1;
+}
+.slider{
+  display: flex;
+  position:absolute;
+}
+.image{
+  width: 100%;
+  height: 98vh;
+  font-size: 35px;
+}
+.image img {
+  width: 100%;
+  height: 100%;
+}
+.container div{
+  transition: all 0.25s cubic-bezier(1, .01, .32, 1);
+}
+
+
+
+
+/* パラルラックス */
+
+.scene {
+  height: 100vh;
+  overflow: hidden;
+  /* font-family: 'Source Sans Pro', sans-serif; */
+  font-weight: 200;
+  background-attachment: fixed;
+  background-size: cover;
+}
+/* .scene.one{
+  background-image: url(images/tenpo/tenpo06.jpg);
+} */
+.scene.two{
+  background-image: url(images/pain/image027.jpg);
+}
+.scene.two header {
+  padding-top: 10vh;
+  height: 40vh;
+  border-radius: 10px;
+  background-color: rgba(1, 1, 1, .4);
+}
+.scene.two p {
+  font-size: 20px;
+}
+.scene.three{
+  background-image: url(images/tenpo/tenpo02.JPG);
+}
+.scene header{
+  max-width: 80%;
+  position: relative;
+  left:50%;
+  top:50%;
+  font-size:1.5rem;
+  transform:translateX(-50%) translateY(-50%);
+}
+.scene header h1{
+  margin-bottom: 1rem;
+  font-size:2rem;
+  font-weight: 300;
+}
+.scene header h1:after{
+  margin:0 auto;
+  margin-top:1rem;
+  display: block;
+  width:8rem;
+  content:'';
+  border-bottom:1px solid white;
+}
+
+
+
+/* パラルラックス 区切り */
+
+.between {
+  width: 100%;
+  height: 600px;
+}
+.between.one {
+  height: 100vh;
+  opacity: 0;
+  transition: 1s;
+  background-image: url(images/background-bread.png);
+}
+.between.two {
+  width: 100%;
+  height: 400px;
+}
+
+
+/* メニュー */
+
+.between-menu {
+  padding-top: 30px;
+  padding-left: 13vw;
+  gap: 10vw;
+  display: flex;
+}
+/* .between-menu img {
+  margin: auto;
+  width: 300px;
+  height: 400px;
+} */
+.between-info h1{
+  padding-top: 2vh;
+}
+
+
+
+
+
+
+/* fade-in */
+
+.fade-in {
+  opacity: 1 !important;
+}
+
+
+
+/* overlay */
+
+.menu {
+  position: relative;
+  width: 300px;
+  height: 400px;
+}
+
+.overlay-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(0, 0, 0, 0.6)
+}
+
+.menu:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.text span {
+  font-size: 15px;
+}
+
+
+
+
+/* ウィンドウ */
+
+/* .window {
+  display: flex;
+  justify-content: space-around;
+}
+.window.top {
+  height: 400px;
+}
+.window.bottom {
+  height: 400px;
+}
+.window-short {
+  width: 40%;
+}
+.window-long {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+}
+.window-long img {
+  width: 100%;
+  height: 400px;
+} */
+
+
+
+/* ニュース */
+
+.news {
+  padding-top: 8vh
+}
+.news-item {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 5vw;
+}
+.day {
+  width: 20vw;
+  text-align: left;
+}
+.item {
+  width: 70vw;
+  text-align: left;
+}
+
+
+
+/* マップ */
+
+.map {
+  padding-top: 20px;
+}
+
+.access {
+  margin: auto;
+  margin-top: 5vh;
+  width: 60%;
+  font-size: 20px;
+  /* font-family: sans-serif; */
+  border-radius: 10px;
+  background-color: rgba(10, 10, 10, 0.6);
+}
+.access span {
+  font-size: 32px;
+}
+
+.booking {
+  margin: auto;
+  width: 120px;
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+.booking a:hover {
+  transition: 0.3s;
+  color: #77ceb1;
+}
+
+
+
+/* フッター */
+.footer {
+  height: 6vh;
+  font-family: sans-serif;
+}
